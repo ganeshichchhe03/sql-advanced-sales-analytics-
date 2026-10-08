@@ -13,7 +13,7 @@ SQL Functions Used:
 
 
 --Find the Total Sales
-SELECT * FROM gold.fact_sales
+--SELECT * FROM gold.fact_sales
 SELECT SUM(sales_amount) AS total_sales FROM gold.fact_sales;
 
 -- Find how many items are sold
@@ -27,11 +27,11 @@ SELECT COUNT(order_number) AS total_orders FROM gold.fact_sales;
 SELECT DISTINCT COUNT(order_number) AS total_orders FROM gold.fact_sales; -- it handles duplicates
 
 -- Find the total number of products (WE NEEED TO USE gold.dim_products Table Now)
-SELECT * FROM gold.dim_products;
+--SELECT * FROM gold.dim_products;
 SELECT COUNT(product_name) AS total_products FROM gold.dim_products;
 
 -- Find the total number of customers
-SELECT * FROM gold.dim_customers;
+--SELECT * FROM gold.dim_customers;
 SELECT COUNT(customer_key) AS total_customers FROM gold.dim_customers;
 
 -- Find the total number of customers that has placed an order
